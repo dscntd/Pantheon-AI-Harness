@@ -15,7 +15,7 @@ Pantheon AI Harness is not a chatbot wrapper. It is an operating layer around lo
 - **Loki** — the media/worker hub. Coordinates ~20 specialized workers: video, image generation (Stable Diffusion), browser automation, YouTube, email, research, and more.
 - **Skadi** — awareness and skill generation. Turns repeated solutions into reusable skills.
 - **Heimdal** — the guardian. System scans, drift detection, LOC alarms, dead-import checks.
-- **Njörd** — the communication layer between agents and the outside.
+- **Njörd** — the trading agent. Paper trading on real market data with virtual money — autonomous decisions, Mon/Wed trading shifts, Saturday research, a weekly plain-language report, and its own trading diary. Live since 07 Nov 2026.
 
 On top of that sits the **System layer**: decision cascade, tool governor, task memory, and an **event bus** — and the **Group Panel**, where up to 7 different AI models debate a question with each other before an answer is synthesized.
 

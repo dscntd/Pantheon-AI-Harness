@@ -27,9 +27,6 @@ On top of that sits the **System layer**: decision cascade, tool governor, task 
 - **Sub-agent spawning** — heavy searches and reviews are delegated to isolated sub-agents with their own tool budgets.
 - **Fix review panel** — proposed code changes appear in a UI panel; nothing lands without approval.
 
-## Why "without knowing how to do it"?
-
-Because the point isn't that a nurse can now write Python. The point is that **architecting, reviewing and steering an AI system is a different skill than typing code** — and this project is a long-running experiment in what that skill can produce. Every file here was written by AI, decided by a human, and survived daily production use.
 
 ## Status
 

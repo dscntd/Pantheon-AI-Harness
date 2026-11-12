@@ -1,6 +1,6 @@
 # Pantheon AI Harness
 
-A multi-agent AI system that runs as a desktop companion — 8 specialized agents, a persistent memory layer, and a supervised self-modification pipeline. Built incrementally over months, in daily use.
+A multi-agent AI system that runs on your PC — 8 specialized agents, a persistent memory layer, and a supervised self-modification pipeline. Built incrementally over months, in daily use.
 
 > Written by a full-time geriatric nurse who had never studied computer science. The AI agents wrote the code; a human steered, reviewed, and made the decisions. This repository documents what that collaboration produced.
 

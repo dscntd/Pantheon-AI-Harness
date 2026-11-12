@@ -108,6 +108,9 @@ Thor can delegate tasks to:
 
 - **Claude** (via Anthropic API) — heavy analysis/review work
 - **Loki** — media worker with 40+ specialized sub-workers
+- **Heimdal** — safety
+- **Skadi** — awareness - autonomous skill generation 
+- **Subagents** — max 6 subagents at once
 
 Thor waits for the result and integrates it into his own context. For the user, Thor remains the only conversational interface.
 

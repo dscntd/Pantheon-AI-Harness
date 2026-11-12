@@ -37,6 +37,8 @@ Actively developed and in daily use. This repository currently contains document
 - [AGENTS.md](AGENTS.md) — the agent roster: who does what
 - [ARCHITECTURE.md](ARCHITECTURE.md) — how the pieces fit together
 - [CODEBASE.md](CODEBASE.md) — full module inventory, directory by directory
+- [SYSTEM.md](SYSTEM.md) — the execution loop, tool governance and decision layer in depth
+- [LEARNING.md](LEARNING.md) — the learning loop: from episodes to validated knowledge
 
 
 ## Video of the harness (video from Sep. some stuff is missing in it)

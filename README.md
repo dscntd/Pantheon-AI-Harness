@@ -40,3 +40,7 @@ Actively developed and in daily use. This repository currently contains document
 - [AGENTS.md](AGENTS.md) — the agent roster: who does what
 - [ARCHITECTURE.md](ARCHITECTURE.md) — how the pieces fit together
 - [CODEBASE.md](CODEBASE.md) — full module inventory, directory by directory
+
+
+## Video of the harness 
+https://www.youtube.com/watch?v=4RuOtlgRgog

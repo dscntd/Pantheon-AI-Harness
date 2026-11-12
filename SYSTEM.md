@@ -8,7 +8,7 @@ How a task travels through Pantheon: from natural-language input to executed, me
 
 One conversation partner instead of forty triggers.
 
-The user talks to exactly one instance: **Thor**. Thor understands *intent*, not keywords — no `create video:` colon-commands, just natural language. Behind the scenes, Thor runs an agent loop:
+The user talks to exactly one instance: **Thor** (You can talk to each agent, but u dont have to). Thor understands *intent*, not keywords — no `create video:` colon-commands, just natural language. Behind the scenes, Thor runs an agent loop:
 
 ```
 understand → call tool → inspect result → think → call next tool → respond

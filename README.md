@@ -35,6 +35,8 @@ On top of that sits the **System layer**: decision cascade, tool governor, task 
 - **Cost-aware model routing** — cheap and fast models for everyday work, strong ones only for hard agentic runs, local Ollama for simple execution tasks. Tool budgets per session keep costs predictable.
 - **Thor Chess** — play a game against your orchestrator in split-screen while chatting with him on the side.
 - **Autonomous YouTube channel manager** — Loki answers comments, uploads videos and handles the channel day to day, through the YouTube API.
+- **Turn compaction** — after every turn, the raw tool output (file reads, search results, command logs) is folded into a short note. Your message and the agent's answer stay. In a live run, a 33-message turn shrank to 5 messages, from ~51k to ~7k     characters. Follow-up turns stop paying for old raw data.
+- **Rucksack (backpack)** — the reset for very long sessions. Once ~500k input tokens have piled up, the harness arms itself and waits for the running turn to finish. The agent then writes a structured handoff file (done, do-not-redo, decisions, current state), the whole context is wiped, and only that file is reloaded. Work continues seamlessly, and nothing is cleared unless the handoff was written successfully.
 
 
 ## Status

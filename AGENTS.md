@@ -5,8 +5,8 @@ Pantheon runs **8 agents + a system layer + a multi-model discussion panel**. Ea
 | Agent | Role | One-liner |
 |-------|------|-----------|
 | **Thor** | Orchestrator / Boss Agent | Reads the user's message, decides: chat, task, or ask back. Plans, delegates, verifies, never blindly obeys. |
-| **Ratatoskr** | Executor | Deterministic file operations, tool jobs, task execution — the hands of the system. |
-| **Dvergar** | Prompt Enhancer | Turns short, slangy user input into structured, complete task descriptions before they hit the pipeline. |
+| **Ratatoskr** Bonsai 27B Local| Executor | Deterministic file operations, tool jobs, task execution — the hands of the system. |
+| **Dvergar** Gemma 4 Local| Prompt Enhancer | Turns short, slangy user input into structured, complete task descriptions before they hit the pipeline. |
 | **Freya** | Passive Analyst & Memory | Watches in the background, extracts durable facts into semantic memory, reflects during idle time. Never blocks the main loop. |
 | **Loki** | Media & Worker Hub | Routes work to ~20 specialized workers: video rendering, image generation, browser automation, YouTube, email, research, files, vision. |
 | **Skadi** | Awareness & Skills | Detects repeated patterns and generates reusable skills from them. |

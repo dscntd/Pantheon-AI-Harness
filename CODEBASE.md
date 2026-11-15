@@ -19,7 +19,7 @@ A directory-by-directory inventory of the system. This is the full map — rough
 
 ## `core/` — The Brain (~53 modules)
 
-The infrastructure every agent stands on.
+The infrastructure every agent stands on. Named below are the core load-bearing modules; the full set is ~53.
 
 - **LLM layer:** `llm_client`, `llm_router`, `config` — multi-provider model access with routing (local and cloud models mixed)
 - **Memory:** `task_memory`, `memory_core`, `memory_manager`, `agent2_memory`, `q_memory`, `transition_memory` — layered persistent memory
@@ -32,7 +32,7 @@ The infrastructure every agent stands on.
 
 ## `orchestrator/` — The Pipeline (~25 modules)
 
-Everything between "user intent" and "worker gets a job".
+Everything between "user intent" and "worker gets a job". Named below are the main pipeline modules; the full set is ~25.
 
 - **Planning:** `loki_planner`, `planner`, `plan_builder`, `execution_plan`, `templates`
 - **Loop & routing:** `agent_loop`, `loop_engine`, `router`, `scheduler`, `intent_resolver`
@@ -41,32 +41,46 @@ Everything between "user intent" and "worker gets a job".
 
 ## `workers/` — The Hands (~20 modules)
 
-One module per capability, each replaceable in isolation.
+One module per capability, each replaceable in isolation. All top-level modules (subfolders excluded):
 
-- **Media:** `remotion_worker` (programmatic video), `thumbnail_worker`, `sd_worker` (Stable Diffusion), `pexels_video_researcher`, `pexels_worker`, `video_cutter_worker`, `loki_image_generator`, `loki_scene_picker`
-- **Interaction:** `browser_worker` (automated browsing), `email_worker`, `notepad_worker`
-- **Knowledge:** `research_worker`, `code_worker`, `vision_worker`, `music_query_resolver`
+- **Media:** `remotion_worker` (programmatic video), `thumbnail_worker`, `sd_worker` (Stable Diffusion), `pexels_video_researcher`, `pexels_worker`, `video_cutter_worker`, `video_editor_worker`, `loki_image_generator`, `loki_scene_picker`
+- **Interaction:** `browser_worker` (automated browsing), `email_worker`, `notepad_worker`, `music_player`
+- **Knowledge:** `research_worker`, `code_worker`, `vision_worker`, `music_query_resolver`, `youtube_worker`
 - **Foundation:** `file_worker`, `base_worker`
 
 ## `thor/` — The Orchestrator Agent (~11 modules)
 
 - `thor_agent.py` — main agent, system prompt, tool dispatch
 - `thor_tools.py` — tool implementations (git, browser, delegation, …)
+- `git_tools.py` — git snapshots, history, diffs
 - `tool_router.py`, `base_agent.py`, `explore_symbol.py` — code navigation and routing
+- `browser_tools_neu.py`, `chrome_cdp_tools.py` — browser automation and Chrome CDP access
 - `agent_profiles/` — agent configuration profiles
 - **Memory:** `episode_store` (SQLite), `semantic_memory`, `thor_memory_init`
 
 ## `freya/` — The Passive Analyst (~9 modules)
 
 - `freya_core`, `freya_reflection` — analysis and reflection loop
+- `freya_light` — lightweight mode
+- `freya_status` — status reporting
 - `idle_cognition` — thinking during downtime
 - `decision_authority` — what Freya may decide alone
 - `heartbeat` — scheduled background wake-ups
+- `proactive_queue` — queue for proactive suggestions
+- `moltbook_watcher` — file-based event watcher
 
 ## `ui/` — The Face
 
-- Live workspace window (desktop UI with chat, fix review panel, widgets, MCP tab, calendar tab)
-- Split frontend modules for the main UI, graph widget, and previews
+All top-level modules (assets, avatars and the `pantheon_split/` subfolder excluded; `.bak_*` files are rollback snapshots):
+
+- `workspace_window_v3.py`, `workspace_window.py` — the live workspace UI and its legacy dev console
+- `robot_window.py`, `thor_panel.py`, `thor_overlay.py` — main windows and the global Thor overlay
+- `Pantheon_AI_v2.html` — the frontend for the live UI (modules in `pantheon_split/`)
+- `fix_review_panel.py` — CodeApply fix review UI
+- `freya_pending_panel.py`, `insta_panel.py`, `interactive_office.py` — specialized panels
+- `calendar_tab.py`, `message_scheduler.py` — calendar and routines
+- `desktop_pet.py`, `speech_bubble.py`, `loki_spoken_overlay.py` — avatar and speech UI
+- `r08_theme.py`, `setup_dialog.py`, `open_old_workspace.py`, `export_cortex_data.py` — theming and utilities
 
 ---
 
